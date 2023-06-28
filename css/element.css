@@ -1,0 +1,63 @@
+.element {
+    background-color: #f1f1f1;
+    width: 250px;
+    margin: 10px;
+    text-align: center;
+    /* line-height: 400px; */
+    /* font-size: 30px; */
+    border: 2px solid lightgray;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    overflow: hidden; /* Додано для обрізання футера */
+    position: relative; /* Додано для позиціонування футера */
+    cursor: pointer;
+}
+
+.element:hover .element-footer {
+    display: flex;
+    justify-content: center;
+}
+.element:hover {
+    transform: scale(1.1);
+}
+.element-img {
+    width: 240px;
+    height: 240px;
+    margin: 10px auto;
+    transition: transform 0.3s ease;
+    position: relative; /* Додано для позиціонування футера */
+    z-index: 1; /* Додано для збільшення пріоритету над футером */
+}
+
+.element-data {
+    text-align: center;
+}
+.element:hover .element-img {
+    transform: scale(1.1);
+}
+.element-name {
+    font-size: 0.9em;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.element-text{
+    font-size: 0.9em;
+    padding-bottom: 5px;
+}
+.element-footer {
+    display: flex;
+    justify-content: center;
+    position: absolute; /* Додано для позиціонування футера */
+    bottom: 0; /* Додано для розташування футера внизу */
+    left: 0; /* Додано для розташування футера в лівому кутку */
+    width: 100%; /* Додано для розтягнення футера на всю ширину */
+    padding: 5px 0; /* Додано для відступів футера */
+    background-color: #f1f1f1; /* Додано для фонового кольору футера */
+    transition: opacity 0.3s ease; /* Додано для плавного переходу видимості футера */
+   opacity: 0; /* Додано для початкової прихованої видимості футера */
+    
+}
+.element:hover .element-footer {
+    opacity: 1; 
+}
